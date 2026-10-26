@@ -12,9 +12,9 @@
 
 ## Tôi đã kiểm chứng câu trả lời của AI như thế nào?
 
-- Chạy \`python -m pytest -q\` trong thư mục dự án.
+- Chạy `python -m pytest -q` trong thư mục dự án sau khi tự kiểm tra code.
 - Thử số tiền bằng 0 hoặc âm, mô tả rỗng, file JSON không hợp lệ và file dữ liệu chưa tồn tại.
-- Đọc lại logic trong \`src/core.py\` và \`src/storage.py\` để chắc chắn hiểu cách xác thực và lưu dữ liệu.
+- Đọc lại logic trong `src/core.py` và `src/storage.py` để chắc chắn hiểu cách xác thực và lưu dữ liệu.
 
 ## Một điều tôi hiểu rõ hơn
 
