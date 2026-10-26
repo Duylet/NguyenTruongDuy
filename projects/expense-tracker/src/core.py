@@ -1,5 +1,6 @@
 """Business rules for the personal expense tracker."""
 
+import math
 from typing import TypedDict
 
 
@@ -24,6 +25,8 @@ def add_transaction(
         raise ValueError("category must not be empty")
     if isinstance(amount, bool) or not isinstance(amount, int | float):
         raise ValueError("amount must be a number")
+    if not math.isfinite(amount):
+        raise ValueError("amount must be finite")
     if amount <= 0:
         raise ValueError("amount must be greater than zero")
 
