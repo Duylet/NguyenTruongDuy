@@ -9,20 +9,20 @@ runtime.
 Use Python 3.12 or newer. From this directory, create and activate a virtual
 environment if desired, then install pytest for the tests:
 
-\`\`\`bash
+```bash
 python -m pip install pytest
-\`\`\`
+```
 
 ## Usage
 
 Run the interactive menu from this directory:
 
-\`\`\`bash
+```bash
 python main.py
-\`\`\`
+```
 
 Choose an option to add transactions, list them, calculate totals, filter by
-category, or save data. Saved records are written to \`data/transactions.json\`.
+category, or save data. Saved records are written to `data/transactions.json`.
 A missing data file is treated as an empty tracker and is created when saving.
 Amounts must be positive numbers; descriptions and categories cannot be blank.
 
@@ -30,19 +30,19 @@ Amounts must be positive numbers; descriptions and categories cannot be blank.
 
 Run the test suite from this directory:
 
-\`\`\`bash
+```bash
 python -m pytest -q
-\`\`\`
+```
 
 The tests cover validation, totals, case-insensitive category filtering, empty
 records, JSON round-trips, missing files, and malformed or incomplete JSON.
 
 ## Main modules
 
-- \`main.py\`: menu and terminal input/output.
-- \`src/core.py\`: transaction validation, listing, filtering, and totals.
-- \`src/storage.py\`: JSON persistence and validation when loading data.
-- \`tests/test_core.py\`: automated behavior tests.
+- `main.py`: menu and terminal input/output.
+- `src/core.py`: transaction validation, listing, filtering, and totals.
+- `src/storage.py`: JSON persistence and validation when loading data.
+- `tests/test_core.py`: automated behavior tests.
 
 ## Design decisions
 
@@ -54,7 +54,7 @@ recurring payments, or multiple currencies.
 
 ## Example
 
-\`\`\`text
+```text
 1. Them giao dich
 Mo ta: Lunch
 Danh muc: Food
@@ -62,11 +62,11 @@ So tien: 50
 Da them giao dich.
 3. Xem tong chi tieu
 Tong chi tieu: 50.00
-\`\`\`
+```
 
 ## Evidence and limitations
 
-Use the test command above to reproduce the checks. The application is a local
+Run the test command above to reproduce the checks. The application is a local
 single-user learning project; it does not encrypt the JSON file or synchronize
 data between devices. The CLI uses simple text prompts and does not manage
 income separately from expenses.
